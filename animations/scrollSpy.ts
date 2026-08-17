@@ -3,13 +3,13 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const NAV_IDS = ["home", "about", "explorations", "interests", "voices", "faq"];
 
-const ACTIVE_COLOR = "#ffff23";
+const ACTIVE_COLOR = "#4c3214";
 // scrollSpy sets an inline color on each nav link, which overrides
 // whatever light/dark theme the sidebar panel underneath switches to (see
 // themeSwitcher.ts) — black inactive text is invisible against Explorations'
 // dark panel background, so it needs its own dark-aware value here too.
-const INACTIVE_COLOR_LIGHT = "#f8e8dc";
-const INACTIVE_COLOR_DARK = "#f8e8dc";
+const INACTIVE_COLOR_LIGHT = "#4c3214";
+const INACTIVE_COLOR_DARK = "#4c3214";
 const INACTIVE_OPACITY = 0.45;
 
 export type ScrollSpyHandle = {
@@ -66,6 +66,7 @@ export function createScrollSpy(): ScrollSpyHandle | null {
       gsap.to(linksFor(id), {
         opacity: isActive ? 1 : INACTIVE_OPACITY,
         color: isActive ? ACTIVE_COLOR : inactiveColor,
+        fontWeight: isActive ? 900 : 700,
         duration: 0.3,
       });
       // MobileNav's overlay always sits on the sand background (never
@@ -73,6 +74,8 @@ export function createScrollSpy(): ScrollSpyHandle | null {
       // black rather than dimmed — no opacity/dark-section handling needed.
       gsap.to(mobileLinksFor(id), {
         color: isActive ? ACTIVE_COLOR : INACTIVE_COLOR_LIGHT,
+        opacity: isActive ? 1 : INACTIVE_OPACITY,
+        fontWeight: isActive ? 900 : 700,
         duration: 0.3,
       });
     });
@@ -84,7 +87,7 @@ export function createScrollSpy(): ScrollSpyHandle | null {
   return {
     destroy: () => {
       trigger.kill();
-      gsap.set(allLinks, { clearProps: "opacity,color" });
+      gsap.set(allLinks, { clearProps: "opacity,color,fontWeight" });
     },
   };
 }

@@ -85,6 +85,9 @@ export function createHeroMorph(metrics: Metrics): HeroMorphHandle | null {
   // as the panels, just without an opacity tween.
   const interactiveEls = sidebarRoot ? [...chromeEls, sidebarRoot] : chromeEls;
   const portraitEl = document.querySelector<HTMLElement>('[data-anim="hero-portrait"]');
+  const navEls = measured
+    .filter((m) => m.id.startsWith("hero-") && !m.id.includes("wordmark") && !m.id.includes("stat"))
+    .map((m) => m.sourceEl);
   // The hero's own card backgrounds never move — only the numbers/labels
   // inside two of them are morph-bound. Left alone, heroSticky staying
   // pinned means these backgrounds just sit there, visible, long after
@@ -136,6 +139,7 @@ export function createHeroMorph(metrics: Metrics): HeroMorphHandle | null {
     const [chromeStart, chromeEnd] = SIDEBAR_CHROME_RANGE;
     const chromeT = gsap.utils.clamp(0, 1, (progress - chromeStart) / (chromeEnd - chromeStart));
     gsap.set(chromeEls, { opacity: chromeT });
+    gsap.set(navEls, { color: "#4c3214" });
     gsap.set(interactiveEls, { pointerEvents: chromeT > 0.9 ? "auto" : "none" });
 
     const [outStart, outEnd] = OUTGOING_TEXT_RANGE;
@@ -168,7 +172,7 @@ export function createHeroMorph(metrics: Metrics): HeroMorphHandle | null {
       trigger.kill();
       gsap.set(
         measured.map((m) => m.sourceEl),
-        { clearProps: "position,left,top,width,margin,fontSize,zIndex" }
+        { clearProps: "position,left,top,width,margin,fontSize,zIndex,color" }
       );
       gsap.set(measured.map((m) => m.ghostEl), { clearProps: "opacity,pointerEvents" });
       gsap.set(chromeEls, { clearProps: "opacity" });

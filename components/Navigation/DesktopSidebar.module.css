@@ -44,11 +44,11 @@
 }
 
 .panel {
-  background: #66503f;
-  border: 1px solid var(--light-border);
+  background: var(--card);
+  border: 1px solid rgb(76 50 20 / 0.14);
   border-radius: 0.475em;
   padding: 1em;
-  color: #f8e8dc;
+  color: var(--brown);
 }
 
 .logo {
@@ -83,7 +83,7 @@
 }
 
 .identityMuted {
-  color: #f8e8dc;
+  color: var(--brown);
 }
 
 .stats {
@@ -104,7 +104,7 @@
 .stat + .stat {
   margin-top: 0.75em;
   padding-top: 1em;
-  border-top: 1px solid rgb(248 232 220 / 0.18);
+  border-top: 1px solid rgb(76 50 20 / 0.16);
 }
 
 .statValue {
@@ -135,7 +135,7 @@
 }
 
 .statText span {
-  color: #f8e8dc;
+  color: var(--brown);
 }
 
 .nav {
@@ -146,8 +146,10 @@
 }
 
 .navLink {
-  font-size: 0.85em;
-  font-weight: 600;
+  color: var(--brown);
+  font-size: 0.9em;
+  font-weight: 800;
+  letter-spacing: 0.015em;
   /* Right padding matches the hero nav link's own padding-right (Hero
      .module.css) — heroMorph.ts interpolates the real hero link's width
      toward this ghost's measured width, so if this doesn't reserve the
@@ -169,7 +171,7 @@
   font-size: 0.7em;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #f8e8dc;
+  color: var(--brown);
 }
 
 .cta {

@@ -14,7 +14,11 @@ history.scrollRestoration = "manual";
 if (window.location.hash) {
   history.replaceState(null, "", window.location.pathname + window.location.search);
 }
-window.scrollTo(0, 0);
+const resetScroll = () => window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+resetScroll();
+window.addEventListener("pageshow", resetScroll);
+window.addEventListener("load", () => requestAnimationFrame(resetScroll), { once: true });
+window.addEventListener("beforeunload", resetScroll);
 document.body.classList.add("js");
 `;
 

@@ -50,7 +50,7 @@ export default function MobileNav() {
     <>
       <header className={styles.header}>
         <a href="#home" className={styles.logo} aria-label="Shaurya Patel — home">
-          <img src="/hero/6.png" alt="Shaurya Patel" />
+          <img src="/newImg/4%20(1).png" alt="Shaurya" />
         </a>
         <button
           type="button"

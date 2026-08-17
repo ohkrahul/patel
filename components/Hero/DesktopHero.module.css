@@ -12,7 +12,7 @@
     top: 0;
     height: 100vh;
     overflow: hidden;
-    background: #b69677;
+    background-color: var(--sand);
     /* position: sticky unconditionally creates a stacking context, even
        with no z-index set (unlike relative/absolute, which only do so
        once z-index is non-auto). Left at the default level (0), the
@@ -46,8 +46,18 @@
   display: flex;
   align-items: center;
   gap: 1em;
-  font-size: 0.8em;
-  font-weight: 600;
+  font-size: 0.9em;
+  font-weight: 800;
+  letter-spacing: 0.015em;
+  color: var(--brown);
+}
+
+.navList a {
+  color: #4c3214 !important;
+}
+
+.navList :global(.hoverStack) span:last-child {
+  color: #4c3214 !important;
 }
 
 /* heroMorph.ts promotes these nav links to position:fixed the instant
@@ -108,8 +118,8 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 26%;
-  aspect-ratio: 3 / 4;
+  width: 32%;
+  height: 80%;
   /* Above the wordmark's morph z-index (40, set inline by heroMorph.ts
      once it's fixed-position) so the portrait stays in front of it
      through the whole scroll, not just at rest. Below the nav row (50)
@@ -138,16 +148,16 @@
 .taglineImg,
 .exploreImg {
   position: absolute;
-  bottom: 3em;
+  bottom: 0.35em;
   z-index: 3;
-  max-width: 22%;
+  max-width: 30%;
   height: auto;
 }
 
 .taglineImg {
-  right: 64%;
+  right: 66%;
 }
 
 .exploreImg {
-  left: 64%;
+  left: 66%;
 }

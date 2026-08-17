@@ -14,7 +14,7 @@
     height: 72px;
     padding: 0 1.25em;
     z-index: 60;
-    background: var(--sand);
+    background-color: var(--sand);
     border-bottom: 1px solid var(--light-border);
   }
 }
@@ -43,7 +43,7 @@
 .toggle span {
   display: block;
   height: 2px;
-  background: var(--black);
+  background: var(--brown);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -63,7 +63,7 @@
   position: fixed;
   inset: 0;
   z-index: 55;
-  background: var(--sand);
+  background-color: var(--sand);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -96,7 +96,7 @@
   align-items: center;
   gap: 1em;
   padding: 0.9em 0;
-  color: var(--black);
+  color: var(--brown);
 }
 
 .overlayNumber {
@@ -107,13 +107,14 @@
   font-family: var(--font-display);
   font-size: 0.85em;
   font-weight: 600;
-  color: #f8e8dc;
+  color: rgb(76 50 20 / 0.55);
 }
 
 .overlayLabel {
   font-family: var(--font-display);
   font-size: 1.6em;
-  font-weight: 700;
+  font-weight: 800;
+  letter-spacing: 0.015em;
   color: inherit;
 }
 
@@ -132,7 +133,7 @@
   width: 2.6em;
   height: 2.6em;
   border-radius: 50%;
-  background: var(--black);
+  background: var(--brown);
   color: var(--white);
 }
 

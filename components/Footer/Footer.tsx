@@ -12,7 +12,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <ImageTrail targetRef={wordmarkRef} />
       <div ref={wordmarkRef} className={styles.wordmark}>
-        <img src="/hero/wordmark.png" alt="Shaurya Patel" />
+        <img src="/newImg/Untitled-12%20copy.png" alt="Shaurya Patel" />
       </div>
       <div className={styles.copyRow}>
         <p className={styles.copy}>

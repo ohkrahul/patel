@@ -47,17 +47,17 @@ export default function DesktopHero() {
 
       <div className={styles.composition}>
         <img
-          src="/hero/wordmark.png"
+          src="/newImg/Untitled-12%20copy.png"
           alt="Shaurya Patel"
           className={styles.wordmarkImg}
           data-anim="hero-wordmark"
         />
         <div className={styles.portraitWrap} data-anim="hero-portrait-wrap">
           <img
-            src="/hero/character1.png"
+            src="/newImg/7.png"
             alt="Shaurya Patel"
-            width={2432}
-            height={1635}
+            width={1968}
+            height={1839}
             data-anim="hero-portrait"
           />
         </div>
@@ -65,13 +65,13 @@ export default function DesktopHero() {
 
       <div className={styles.statementRow}>
         <img
-          src="/hero/tagline.png"
+          src="/newImg/1%20(2).png"
           alt="Curious by nature. Building by choice."
           className={styles.taglineImg}
           data-preload="hero-card"
         />
         <img
-          src="/hero/explore-text.png"
+          src="/newImg/8%20(1).png"
           alt="Exploring science, AI, healthcare, research and music."
           className={styles.exploreImg}
           data-preload="hero-card"

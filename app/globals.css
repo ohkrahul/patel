@@ -1,5 +1,6 @@
 :root {
-  --sand: #b69677;
+  --sand: #e5cdb0;
+  --brown: #4c3214;
   --yellow: #ffff23;
   --gold: #d4af37;
   --black: #000000;
@@ -45,7 +46,7 @@ body {
 }
 
 body {
-  background: var(--sand);
+  background-color: var(--sand);
   color: var(--black);
   overflow-x: clip;
   overflow-y: visible;
@@ -134,7 +135,7 @@ img {
 }
 
 .hoverStack span:last-child {
-  color: var(--yellow);
+  color: #4c3214;
 }
 
 a:hover .hoverStack,

@@ -3,15 +3,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import type { Metrics } from "./metrics";
 
 const LIGHT = {
-  background: "rgba(102, 80, 63, 0.92)",
-  borderColor: "rgba(255, 255, 255, 0.2)",
-  color: "#f8e8dc",
+  background: "rgba(224, 223, 197, 0.96)",
+  borderColor: "rgba(76, 50, 20, 0.14)",
+  color: "#4c3214",
 };
 
 const DARK = {
-  background: "rgba(29, 29, 29, 0.6)",
-  borderColor: "rgba(255, 255, 255, 0.1)",
-  color: "#ffffff",
+  background: "rgba(224, 223, 197, 0.96)",
+  borderColor: "rgba(76, 50, 20, 0.14)",
+  color: "#4c3214",
 };
 
 const TRANSITION_BUFFER = 300;

@@ -5,16 +5,16 @@ export default function MobileHero() {
     <div className={styles.wrap}>
       <div className={styles.composition}>
         <img
-          src="/hero/wordmark.png"
+          src="/newImg/Untitled-12%20copy.png"
           alt="Shaurya Patel"
           className={styles.wordmarkImg}
         />
         <div className={styles.portraitWrap}>
           <img
-            src="/hero/character1.png"
+            src="/newImg/7.png"
             alt="Shaurya Patel"
-            width={2752}
-            height={1536}
+            width={1968}
+            height={1839}
           />
         </div>
       </div>

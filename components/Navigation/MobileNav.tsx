@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./MobileNav.module.css";
 
 const NAV_ITEMS = [
@@ -45,6 +45,10 @@ const SOCIAL_LINKS = [
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    window.dispatchEvent(new CustomEvent("mobile-menu-toggle", { detail: open }));
+  }, [open]);
 
   return (
     <>

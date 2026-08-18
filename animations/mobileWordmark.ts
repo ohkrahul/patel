@@ -40,16 +40,26 @@ export function createMobileWordmarkAnimation(): MobileWordmarkHandle | null {
   };
 
   apply(0);
+  let menuOpen = false;
   const trigger = ScrollTrigger.create({
     start: 0,
     end: 280,
     scrub: 0.45,
-    onUpdate: (self) => apply(self.progress),
+    onUpdate: (self) => {
+      if (!menuOpen) apply(self.progress);
+    },
   });
+
+  const handleMenuToggle = (event: Event) => {
+    menuOpen = Boolean((event as CustomEvent<boolean>).detail);
+    apply(menuOpen ? 1 : trigger.progress);
+  };
+  window.addEventListener("mobile-menu-toggle", handleMenuToggle);
 
   return {
     destroy: () => {
       trigger.kill();
+      window.removeEventListener("mobile-menu-toggle", handleMenuToggle);
       gsap.set(source, { clearProps: "position,left,top,width,height,margin,zIndex" });
     },
   };

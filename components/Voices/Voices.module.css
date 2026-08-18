@@ -39,8 +39,8 @@
 
   .sticky {
     position: sticky;
-    top: 72px;
-    height: min(calc(100svh - 72px), 650px);
+    top: var(--mobile-nav-height);
+    height: min(calc(100svh - var(--mobile-nav-height)), 650px);
     padding: 2em 0;
     overflow: hidden;
   }

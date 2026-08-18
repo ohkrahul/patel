@@ -29,7 +29,7 @@ export function createLenisEngine(): LenisEngine {
     touchMultiplier: 1,
     anchors: {
       duration: 1.1,
-      offset: usesTouch ? -72 : 0,
+      offset: usesTouch ? -84 : 0,
       easing: (t: number) => 1 - Math.pow(1 - t, 4),
     },
     stopInertiaOnNavigate: true,

@@ -51,7 +51,7 @@ export function createInterestsAnimations(): InterestsHandle | null {
       ease: "none",
       scrollTrigger: {
         trigger: section,
-        start: "top 72px",
+        start: "top 84px",
         end: () => `+=${getDistance()}`,
         scrub: 0.55,
         invalidateOnRefresh: true,

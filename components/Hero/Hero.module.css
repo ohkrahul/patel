@@ -5,7 +5,7 @@
 
 @media (max-width: 767px) {
   .hero {
-    min-height: calc(100svh - 72px);
+    min-height: calc(100svh - var(--mobile-nav-height));
   }
 }
 

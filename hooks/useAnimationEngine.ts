@@ -13,6 +13,7 @@ import { createCuriosityAnimations } from "@/animations/curiosity";
 import { createInterestsAnimations } from "@/animations/interests";
 import { createVoicesAnimations } from "@/animations/voices";
 import { createScrollSpy } from "@/animations/scrollSpy";
+import { createMobileWordmarkAnimation } from "@/animations/mobileWordmark";
 import { playPreloader, type PreloaderHandle } from "@/animations/preloader";
 import { MOTION, isDesktopMotionActive, prefersReducedMotion } from "@/animations/config";
 
@@ -31,6 +32,7 @@ export function useAnimationEngine() {
     let interestsHandle: Handle | null = null;
     let voicesHandle: Handle | null = null;
     let scrollSpyHandle: Handle | null = null;
+    let mobileWordmarkHandle: Handle | null = null;
     let preloaderHandle: PreloaderHandle | null = null;
 
     function teardownDesktopMotion() {
@@ -87,6 +89,7 @@ export function useAnimationEngine() {
       // against the pre-JS CSS fallback height instead of the real one.
       explorationsHandle = createExplorationsAnimations();
       setupDesktopMotion();
+      mobileWordmarkHandle = createMobileWordmarkAnimation();
       journeyHandle = createJourneyAnimations();
       curiosityHandle = createCuriosityAnimations();
       interestsHandle = createInterestsAnimations();
@@ -104,7 +107,7 @@ export function useAnimationEngine() {
         if (target) {
           lenisEngine.lenis.scrollTo(target, {
             immediate: true,
-            offset: isDesktopMotionActive() ? 0 : -72,
+            offset: isDesktopMotionActive() ? 0 : -84,
           });
           ScrollTrigger.update();
         }
@@ -138,6 +141,7 @@ export function useAnimationEngine() {
       interestsHandle?.destroy();
       voicesHandle?.destroy();
       scrollSpyHandle?.destroy();
+      mobileWordmarkHandle?.destroy();
       lenisEngine.destroy();
     };
   }, []);

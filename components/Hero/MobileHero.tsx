@@ -8,6 +8,7 @@ export default function MobileHero() {
           src="/newImg/Untitled-12%20copy.png"
           alt="Shaurya Patel"
           className={styles.wordmarkImg}
+          data-anim="mobile-wordmark"
         />
         <div className={styles.portraitWrap}>
           <img

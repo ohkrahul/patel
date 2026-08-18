@@ -11,7 +11,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 72px;
+    height: var(--mobile-nav-height);
     padding: 0 1.25em;
     z-index: 60;
     background-color: var(--sand);
@@ -19,15 +19,16 @@
   }
 }
 
-.logo {
+.logoTarget {
   display: flex;
   align-items: center;
-  width: clamp(130px, 42vw, 180px);
-  height: 46px;
-  overflow: hidden;
+  width: clamp(185px, 58vw, 245px);
+  height: 58px;
+  opacity: 0;
+  pointer-events: auto;
 }
 
-.logo img {
+.logoTarget img {
   width: 100%;
   height: auto;
 }
@@ -67,7 +68,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 88px 1.5em 2em;
+  padding: calc(var(--mobile-nav-height) + 16px) 1.5em 2em;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;

@@ -97,7 +97,7 @@ export function createVoicesAnimations(): VoicesHandle | null {
   const timeline = gsap.timeline({
     scrollTrigger: {
       trigger: section,
-      start: "top 72px",
+      start: "top 84px",
       end: () => `+=${scrollDistance()}`,
       scrub: 0.45,
       invalidateOnRefresh: true,

@@ -49,8 +49,13 @@ export default function MobileNav() {
   return (
     <>
       <header className={styles.header}>
-        <a href="#home" className={styles.logo} aria-label="Shaurya Patel — home">
-          <img src="/newImg/4%20(1).png" alt="Shaurya" />
+        <a
+          href="#home"
+          className={styles.logoTarget}
+          aria-label="Shaurya Patel — home"
+          data-anim="mobile-wordmark-target"
+        >
+          <img src="/newImg/Untitled-12%20copy.png" alt="" />
         </a>
         <button
           type="button"

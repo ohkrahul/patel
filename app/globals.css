@@ -33,6 +33,7 @@
   --sidebar-width: clamp(200px, 13.9vw, 267px);
   --sidebar-offset: 20px;
   --content-left: calc(var(--sidebar-offset) + var(--sidebar-width) + 15px);
+  --mobile-nav-height: 84px;
 }
 
 * {
@@ -172,7 +173,7 @@ a:focus-visible .hoverStack {
 
 @media (max-width: 767px) {
   .page {
-    padding-top: 72px;
+    padding-top: var(--mobile-nav-height);
     padding-left: 1.25em;
     padding-right: 1.25em;
   }

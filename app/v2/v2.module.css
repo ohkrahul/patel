@@ -206,7 +206,12 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: clamp(240px, 32vw, 470px);
+  /* Height-driven, not width-driven: a width in vw can exceed the hero box
+     on a short viewport, and .hero's overflow then cuts the head off.
+     Capping at 100% of .heroInner keeps the whole figure inside. */
+  height: min(100%, 640px);
+  width: auto;
+  max-width: 44%;
   aspect-ratio: 72 / 100;
   overflow: hidden;
   z-index: 2;
@@ -908,7 +913,9 @@
     position: static;
     transform: none;
     margin: -4vw auto 0;
+    height: auto;
     width: min(52vw, 240px);
+    max-width: none;
     /* portraitIn ends on translate(-50%) for the absolute desktop layout,
        which would drag the now-static element off-centre here. */
     animation-name: riseIn;

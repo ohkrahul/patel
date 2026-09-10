@@ -147,10 +147,6 @@ export default function V2Page() {
     <div className={s.page}>
       <header className={s.header}>
         <div className={s.headerInner}>
-          <a href="#top" className={s.logo}>
-            SP
-          </a>
-
           <nav className={s.nav}>
             <div className={s.navItem}>
               <a className={s.navLink} href="#about">

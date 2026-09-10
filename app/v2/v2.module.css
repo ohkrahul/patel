@@ -42,20 +42,8 @@
   min-height: 96px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 24px;
-}
-
-.logo {
-  width: 62px;
-  height: 62px;
-  border: 2px solid var(--ink);
-  display: grid;
-  place-items: center;
-  font-family: var(--font-archivo), sans-serif;
-  font-weight: 500;
-  font-size: 1.5rem;
-  letter-spacing: 0.02em;
 }
 
 .nav {
@@ -890,6 +878,10 @@
 @media (max-width: 900px) {
   .nav {
     display: none;
+  }
+
+  .headerInner {
+    justify-content: flex-end;
   }
 
   .mobileMenu {

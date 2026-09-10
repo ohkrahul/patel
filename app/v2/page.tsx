@@ -213,10 +213,10 @@ export default function V2Page() {
 
             <div className={s.heroPortrait}>
               <Image
-                src="/shaurya/portrait.png"
+                src="/shaurya/hero.webp"
                 alt="Shaurya Patel"
-                width={556}
-                height={444}
+                width={1000}
+                height={1284}
                 priority
               />
             </div>
@@ -310,10 +310,10 @@ export default function V2Page() {
 
               <a className={`${s.videoCard} ${s.reveal}`} href="#work">
                 <Image
-                  src="/shaurya/portrait2.png"
+                  src="/shaurya/hero.webp"
                   alt="Shaurya Patel"
-                  width={444}
-                  height={352}
+                  width={1000}
+                  height={1284}
                 />
                 <span className={`${s.display} ${s.videoLabel}`}>
                   Research Reel
@@ -339,10 +339,10 @@ export default function V2Page() {
             <div className={s.foundGrid}>
               <Image
                 className={`${s.foundPhoto} ${s.reveal}`}
-                src="/shaurya/portrait2.png"
+                src="/shaurya/hero.webp"
                 alt="Shaurya Patel"
-                width={444}
-                height={352}
+                width={1000}
+                height={1284}
               />
 
               <div className={s.pillars}>

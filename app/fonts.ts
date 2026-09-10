@@ -5,6 +5,9 @@ export const archivo = Archivo({
   variable: "--font-archivo",
   subsets: ["latin"],
   weight: "variable",
+  // wdth lets the display headings run condensed (font-stretch: 62.5%)
+  // without shipping a second family.
+  axes: ["wdth"],
 });
 
 export const caveat = Caveat({

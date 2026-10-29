@@ -178,8 +178,7 @@
 
 .heroName {
   font-size: clamp(3.2rem, 13.2vw, 11.5rem);
-  font-stretch: 75%;
-  font-weight: 800;
+  font-weight: 200;
   letter-spacing: -0.015em;
   text-align: center;
   white-space: nowrap;

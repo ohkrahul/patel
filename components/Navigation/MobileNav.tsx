@@ -59,7 +59,7 @@ export default function MobileNav() {
           aria-label="Shaurya Patel — home"
           data-anim="mobile-wordmark-target"
         >
-          <img src="/newImg/Untitled-12%20copy.png" alt="" />
+          <img src="/newImg/Shaurya-Patel-Option1-cropped.png" alt="" />
         </a>
         <button
           type="button"

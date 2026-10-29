@@ -5,7 +5,7 @@ export default function MobileHero() {
     <div className={styles.wrap}>
       <div className={styles.composition}>
         <img
-          src="/newImg/Untitled-12%20copy.png"
+          src="/newImg/Shaurya-Patel-Option1-cropped.png"
           alt="Shaurya Patel"
           className={styles.wordmarkImg}
           data-anim="mobile-wordmark"

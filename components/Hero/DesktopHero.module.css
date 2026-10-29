@@ -33,7 +33,11 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 40%;
+  /* The wordmark scales with width but 40% scales with height, so on wide,
+     short screens "Patel" drops onto INTERESTS. The second term is where
+     the wordmark's ink ends (30px top + its 0.2427 aspect x 84% ink depth)
+     plus a 16px gap - retune it if the wordmark art changes. */
+  top: max(40%, calc((100vw - 40px) * 0.205 + 46px));
   padding: 0 2.5em;
   /* Above heroMorph's highest z-index (45) — a lower value here would cap
      the fixed nav links' own z-index at this stacking context's level

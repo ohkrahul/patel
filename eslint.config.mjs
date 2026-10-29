@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Prebuilt /v3 snapshot - minified output, not source.
+    "public/v3/**",
   ]),
 ]);
 

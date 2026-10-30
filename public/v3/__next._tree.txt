@@ -6,7 +6,7 @@
 :HL["/v3/_next/static/media/a85fe84266768609-s.p.0h6ig86gwutp4.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/v3/_next/static/chunks/0z5w4t2ih67ki.css","style"]
 :HL["/newImg/Shaurya-Patel-Option2-cropped.png","image"]
-:HL["/hero/character1.png","image"]
+:HL["/shaurya/hero.webp","image"]
 :HL["/hero/tagline.png","image"]
 :HL["/hero/explore-text.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"2xbevEFiDdxnEisklSEqq"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"GlOH42SUU4I3iiwyps01H"}
